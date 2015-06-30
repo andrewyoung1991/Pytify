@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import requests
 import sys
 
@@ -27,11 +29,9 @@ class Pytifylib:
                 response = requests.get(self.url % search)
             except requests.exceptions.TooManyRedirects:
                 print('Something wrong with your request. Try again.')
-
                 return False
-            except requests.exceptions.RequestException as e:
-                print(e)
-                sys.exit(1)
+            except requests.exceptions.RequestException as err:
+                raise SystemExit(err)
 
             self._history.append(query)
 

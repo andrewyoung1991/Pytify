@@ -1,10 +1,13 @@
 #!/usr/bin/env python
-import pytifylib
-from strategy import get_pytify_class_by_platform
-from menu import Menu
+from __future__ import absolute_import, print_function
+
 import argparse
 import sys
 import curses
+
+from . import pytifylib
+from .strategy import get_pytify_class_by_platform
+from .menu import Menu
 
 
 class App:

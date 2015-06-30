@@ -1,6 +1,9 @@
+from __future__ import absolute_import, print_function
+
 import sys
 import subprocess
-from pytifylib import Pytifylib
+
+from .pytifylib import Pytifylib
 
 
 class DarwinPytify(Pytifylib):
